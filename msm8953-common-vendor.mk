@@ -16,6 +16,7 @@
 
 PRODUCT_COPY_FILES += \
     vendor/xiaomi/msm8953-common/proprietary/bin/wfdservice:system/bin/wfdservice \
+    vendor/xiaomi/msm8953-common/proprietary/vendor/etc/init/vendor.xiaomi.hardware.mlipay@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.xiaomi.hardware.mlipay@1.0-service.rc \
     vendor/xiaomi/msm8953-common/proprietary/etc/init/wfdservice.rc:system/etc/init/wfdservice.rc \
     vendor/xiaomi/msm8953-common/proprietary/etc/permissions/cneapiclient.xml:system/etc/permissions/cneapiclient.xml \
     vendor/xiaomi/msm8953-common/proprietary/etc/permissions/com.qti.snapdragon.sdk.display.xml:system/etc/permissions/com.qti.snapdragon.sdk.display.xml \
@@ -102,6 +103,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/msm8953-common/proprietary/lib64/vendor.qti.hardware.qdutils_disp@1.0.so:system/lib64/vendor.qti.hardware.qdutils_disp@1.0.so \
     vendor/xiaomi/msm8953-common/proprietary/lib64/vendor.qti.hardware.tui_comm@1.0.so:system/lib64/vendor.qti.hardware.tui_comm@1.0.so \
     vendor/xiaomi/msm8953-common/proprietary/lib64/vendor.qti.imsrtpservice@1.0.so:system/lib64/vendor.qti.imsrtpservice@1.0.so \
+    vendor/xiaomi/msm8953-common/proprietary/vendor/lib64/vendor.xiaomi.hardware.mlipay@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.xiaomi.hardware.mlipay@1.0.so \
     vendor/xiaomi/msm8953-common/proprietary/vendor/bin/ATFWD-daemon:$(TARGET_COPY_OUT_VENDOR)/bin/ATFWD-daemon \
     vendor/xiaomi/msm8953-common/proprietary/vendor/bin/adsprpcd:$(TARGET_COPY_OUT_VENDOR)/bin/adsprpcd \
     vendor/xiaomi/msm8953-common/proprietary/vendor/bin/cnd:$(TARGET_COPY_OUT_VENDOR)/bin/cnd \
@@ -124,6 +126,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/msm8953-common/proprietary/vendor/bin/irsc_util:$(TARGET_COPY_OUT_VENDOR)/bin/irsc_util \
     vendor/xiaomi/msm8953-common/proprietary/vendor/bin/loc_launcher:$(TARGET_COPY_OUT_VENDOR)/bin/loc_launcher \
     vendor/xiaomi/msm8953-common/proprietary/vendor/bin/lowi-server:$(TARGET_COPY_OUT_VENDOR)/bin/lowi-server \
+    vendor/xiaomi/msm8953-common/proprietary/vendor/bin/mlipayd:$(TARGET_COPY_OUT_VENDOR)/bin/mlipayd \
     vendor/xiaomi/msm8953-common/proprietary/vendor/bin/mm-pp-dpps:$(TARGET_COPY_OUT_VENDOR)/bin/mm-pp-dpps \
     vendor/xiaomi/msm8953-common/proprietary/vendor/bin/msm_irqbalance:$(TARGET_COPY_OUT_VENDOR)/bin/msm_irqbalance \
     vendor/xiaomi/msm8953-common/proprietary/vendor/bin/netmgrd:$(TARGET_COPY_OUT_VENDOR)/bin/netmgrd \
@@ -196,6 +199,14 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/msm8953-common/proprietary/vendor/firmware/cpp_firmware_v1_5_2.fw:$(TARGET_COPY_OUT_VENDOR)/firmware/cpp_firmware_v1_5_2.fw \
     vendor/xiaomi/msm8953-common/proprietary/vendor/firmware/cpp_firmware_v1_6_0.fw:$(TARGET_COPY_OUT_VENDOR)/firmware/cpp_firmware_v1_6_0.fw \
     vendor/xiaomi/msm8953-common/proprietary/vendor/firmware/cpp_firmware_v1_8_0.fw:$(TARGET_COPY_OUT_VENDOR)/firmware/cpp_firmware_v1_8_0.fw \
+    vendor/xiaomi/msm8953-common/proprietary/vendor/firmware/mlipay.b00:$(TARGET_COPY_OUT_VENDOR)/firmware/mlipay.b00 \
+    vendor/xiaomi/msm8953-common/proprietary/vendor/firmware/mlipay.b01:$(TARGET_COPY_OUT_VENDOR)/firmware/mlipay.b01 \
+    vendor/xiaomi/msm8953-common/proprietary/vendor/firmware/mlipay.b02:$(TARGET_COPY_OUT_VENDOR)/firmware/mlipay.b02 \
+    vendor/xiaomi/msm8953-common/proprietary/vendor/firmware/mlipay.b03:$(TARGET_COPY_OUT_VENDOR)/firmware/mlipay.b03 \
+    vendor/xiaomi/msm8953-common/proprietary/vendor/firmware/mlipay.b04:$(TARGET_COPY_OUT_VENDOR)/firmware/mlipay.b04 \
+    vendor/xiaomi/msm8953-common/proprietary/vendor/firmware/mlipay.b05:$(TARGET_COPY_OUT_VENDOR)/firmware/mlipay.b05 \
+    vendor/xiaomi/msm8953-common/proprietary/vendor/firmware/mlipay.b06:$(TARGET_COPY_OUT_VENDOR)/firmware/mlipay.b06 \
+    vendor/xiaomi/msm8953-common/proprietary/vendor/firmware/mlipay.mdt:$(TARGET_COPY_OUT_VENDOR)/firmware/mlipay.mdt \
     vendor/xiaomi/msm8953-common/proprietary/vendor/lib/com.qualcomm.qti.dpm.api@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/com.qualcomm.qti.dpm.api@1.0.so \
     vendor/xiaomi/msm8953-common/proprietary/vendor/lib/com.qualcomm.qti.imscmservice@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/com.qualcomm.qti.imscmservice@1.0.so \
     vendor/xiaomi/msm8953-common/proprietary/vendor/lib/com.qualcomm.qti.imscmservice@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/com.qualcomm.qti.imscmservice@2.0.so \
@@ -494,6 +505,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/msm8953-common/proprietary/vendor/lib64/liblqe.so:$(TARGET_COPY_OUT_VENDOR)/lib64/liblqe.so \
     vendor/xiaomi/msm8953-common/proprietary/vendor/lib64/libmdmdetect.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmdmdetect.so \
     vendor/xiaomi/msm8953-common/proprietary/vendor/lib64/libmdsprpc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmdsprpc.so \
+    vendor/xiaomi/msm8953-common/proprietary/vendor/lib64/libmlipay.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmlipay.so \
     vendor/xiaomi/msm8953-common/proprietary/vendor/lib64/libmm-color-convertor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmm-color-convertor.so \
     vendor/xiaomi/msm8953-common/proprietary/vendor/lib64/libmm-hdcpmgr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmm-hdcpmgr.so \
     vendor/xiaomi/msm8953-common/proprietary/vendor/lib64/libnetmgr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libnetmgr.so \
